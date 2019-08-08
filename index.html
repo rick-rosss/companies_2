@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <!-- build:css css/combined.css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.10.0-web/css/all.min.css">
+    <!-- endbuild -->
+</head>
+<body>
+<form class="form">
+    <div class="form__header">Sign up</div>
+    <div class="form__block">
+        <i class="fas fa-user form__icon"></i>
+        <input type="text" class="form__input" placeholder="Username" name="name">
+    </div>
+    <div class="form__block">
+        <i class="fas fa-user form__icon "></i>
+        <input type="text" class="form__input" placeholder="Surname" name="secondname">
+    </div>
+    <div class="form__block">
+        <i class="fas fa-envelope form__icon"></i>
+        <input type="email" class="form__input" placeholder="Email" name="email">
+    </div>
+    <div class="form__block">
+        <select name="gender" id="" class="form__select">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    </div>
+    <div class="form__block">
+        <i class="fas fa-key form__icon"></i>
+        <input type="password" class="form__input" placeholder="Password" name="pass">
+    </div>
+    <div class="form__block">
+        <input type="checkbox" class="form__checkbox" name="agree"> Conditions of Agreement
+    </div>
+    <div class="form__block">
+        <input type="submit" value="Sent" class="form__button">
+    </div>
+</form>
+<!-- build:js code/combined-form.js -->
+<script src="code/jquery-3.4.1.min.js"></script>
+<script src="code/jquery.validate.min.js"></script>
+<script src="code/post_form.js"></script>
+<!-- endbuild -->
+</body>
+</html>

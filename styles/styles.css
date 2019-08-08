@@ -1,0 +1,355 @@
+html {
+    font-size: 10px;
+    font-family: Arial;
+}
+.preloader {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255, 0.7);
+}
+.preloader__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+    border-radius: 50%;
+    animation: spin 600ms infinite linear;
+}
+.preloader__in-circle {
+    width: 140px;
+    height: 140px;
+    background: white;
+    border-radius: 50%;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.form {
+    width: 50rem;
+    height: 40rem;
+    margin: 80px auto 0 auto;
+    border: 2px solid #DDD;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+.form__header,
+.cont__header {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    background: #DDD;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.form__input,
+.form__select {
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 2px solid #DDD;
+    font-size: 1.4rem;
+}
+.form__input {
+    outline: none;
+    width: 90%;
+    padding: 0 0 0 4rem;
+    margin: 0;
+    box-sizing: content-box;
+}
+.form__select {
+    width: 90%;
+    box-sizing: content-box;
+    padding: 0 3rem 0 1rem;
+}
+.form__block {
+    margin-top: 1.5rem;
+    width: 90%;
+    height: 3rem;
+    position: relative;
+    font-size: 1.4rem;
+}
+.form__block:last-child {
+    margin: 0 0 1.5rem 0;
+}
+.form__icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+}
+.form__button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.4rem;
+    float: right;
+}
+label.error {
+    font-size: 1.2rem;
+    color: #AAA;
+}
+input.error {
+    border: 2px solid #F00;
+}
+.cont {
+    width: 90%;
+    max-width: 1140px;
+    display: flex;
+    margin: 10rem auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cont__block {
+    margin: 1rem;
+    border-radius: 0.5rem;
+    width: 47%;
+    height: 30rem;
+    border: 2px solid #DDD;
+}
+.cont__header {
+    box-sizing: border-box;
+    padding: 0 2rem;
+    text-align: left;
+    margin: 0;
+    height: 4rem;
+    line-height: 4rem;
+}
+.cont__inf {
+    padding: 1rem;
+    height: 24rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont__inf_circle {
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont__text {
+    font-size: 3rem;
+}
+.cont__list_loc,
+.cont__list {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    border: 1px solid #777;
+}
+
+.list__item {
+    box-sizing: border-box;
+    border: 1px solid #777;
+    height: 20%;
+    display: flex;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.list__item:hover {
+    background: #EEE;
+}
+.list__text {
+    padding-left: 1rem;
+}
+.cont__partn {
+    display: none;
+    width: 100%;
+    height: 40rem;
+    border: 2px solid #DDD;
+    margin: 1rem;
+
+}
+.cont__partn_inf {
+    padding: 1rem;
+    height: 33rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+}
+.list_p {
+    position: relative;
+    flex: 0 0 10.4%;
+    height: 32rem;
+    margin: 0 1%;
+    display: flex;
+    justify-content: center;
+    background: #EEE;
+}
+.list_p__circle {
+    background: #FFF;
+    margin-top: 5%;
+    width: 7rem;
+    height: 7rem;
+    border: 1px solid #DDD;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list_p__text {
+    line-height:5rem;
+    width: 12rem;
+    height: 5rem;
+    transform:  rotate(-90deg);
+    position: absolute;
+    bottom: 4rem;
+    font-size: 3rem;
+}
+.cont__sort {
+    position: absolute;
+    font-size: 1.2rem;
+    right: 2rem;
+}
+.partn_header {
+    position: relative;
+}
+.cont__sort_percent,
+.cont__sort_name {
+    font-weight: normal;
+    padding-right: 1.5rem;
+}
+.percent_arrow,
+.name_arrows {
+    display: inline-block;
+}
+.percent_arrow_down,
+.percent_arrow_up,
+.name_arrow_down,
+.name_arrow_up {
+    cursor: pointer;
+}
+.percent_arrow_up,
+.name_arrow_up {
+    position: absolute;
+    top: 1rem;
+}
+.percent_arrow_down,
+.name_arrow_down {
+    position: absolute;
+    bottom: 0.8rem;
+}
+.percent_arrow_down,
+.percent_arrow_up {
+    right: -0.5rem;
+}
+.cont__news {
+    width: 100%;
+    position: relative;
+    max-height: 130px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+.cont__news_img {
+    float: left;
+    margin-right: 1.5rem;
+}
+.cont__news_text {
+    margin: 0;
+    font-size: 1.4rem;
+}
+.cont__news_ell {
+    display: none;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0;
+}
+.cont__inf_news {
+    flex-wrap: wrap;
+}
+.news_date,
+.news_author {
+    width: 100%;
+    font-size: 1.4rem;
+    margin: 0;
+}
+.news_menu {
+    display: flex;
+}
+.menu_item {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #DDD;
+    border-radius: 50%;
+    margin: 0 0.3rem;
+}
+.news_item-active {
+    background: #AAA;
+}
+.news_date_title,
+.news_author_title {
+    font-weight: bold;
+    font-style: italic;
+}
+.cont__canvas {
+    width: 34rem;
+    height: 24rem;
+}
+.cont__list_loc {
+    display: none;
+}
+.cont__btn-back {
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+.short_header {
+    display: none;
+}
+@media screen and (min-width: 501px) and (max-width: 920px) {
+    .cont__block {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .cont {
+        width: 100%;
+        margin: 5rem 0;
+    }
+    .cont__block {
+        margin: 1rem 0;
+    }
+    .cont__canvas {
+        width: 32rem;
+    }
+    .short_header {
+        display: inline;
+    }
+    .full_header {
+        display: none;
+    }
+    .cont__block {
+        width: 100%;
+    }
+    html {
+        font-size: 8px;
+    }
+    .form {
+        width: 100%;
+    }
+    .form__input,
+    .form__select {
+        font-size: 1.6rem;
+        height: 4rem;
+    }
+}

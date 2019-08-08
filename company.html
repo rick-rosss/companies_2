@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <!-- build:css css/combined.css -->
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.10.0-web/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- endbuild -->
+</head>
+<body>
+<div class="preloader">
+    <div class="preloader__circle">
+        <div class="preloader__in-circle"></div>
+    </div>
+</div>
+<main class="cont">
+    <div class="cont__block">
+        <p class="cont__header">Total Companies</p>
+        <div class="cont__inf">
+            <div class="cont__inf_circle">
+                <p class="cont__text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="cont__block">
+        <p class="cont__header">List of companies</p>
+        <div class="cont__inf">
+            <div class="cont__list">
+            </div>
+        </div>
+    </div>
+    <div class="cont__partn">
+        <p class="cont__header partn_header">
+            <span class="full_header">Company partners</span>
+            <span class="short_header">CP</span>
+            <span class="cont__sort">
+                Sort by:
+                <span class = "cont__sort_name">
+                    Name
+                    <span class="name_arrows">
+                        <i class="fas fa-angle-up name_arrow_up"></i>
+                        <i class="fas fa-angle-down name_arrow_down"></i>
+                    </span>
+                </span>
+                <span class = "cont__sort_percent">Percentage
+                    <span class="percent_arrows">
+                        <i class="fas fa-angle-up percent_arrow_up"></i>
+                        <i class="fas fa-angle-down percent_arrow_down"></i>
+                    </span>
+                </span>
+            </span>
+        </p>
+        <div class="cont__partn_inf">
+        </div>
+    </div>
+    <div class="cont__block">
+        <p class="cont__header">Companies by Location <span class="cont__btn-back"><i class="fas fa-arrow-left"></i></span></p>
+        <div class="cont__inf">
+            <div class="cont__list_loc"></div>
+            <div class="cont__canvas">
+                <canvas id="chart" width="140" height="100"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="cont__block">
+        <p class="cont__header">News</p>
+        <div class="cont__inf cont__inf_news">
+            <div class="cont__news">
+                <img src="//dummyimage.com/645x434.png/dddddd/000000" width="160" height="130" alt="news_image" class="cont__news_img">
+                <p class="cont__news_text">
+                </p>
+                <i class="fas fa-ellipsis-h cont__news_ell"></i>
+            </div>
+            <p class="news_author">
+                <span class="news_author_title">Author: </span>
+                <span class="news_author_name"></span>
+            </p>
+            <p class="news_date">
+                <span class="news_date_title">Date: </span>
+                <span class="news_date_value"></span>
+            </p>
+            <div class="news_menu">
+                <div class="menu_item" id="prev_news"></div>
+                <div class="menu_item news_item-active"></div>
+                <div class="menu_item" id="next_news"></div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+<!-- build:js code/combined-main.js -->
+<script src="code/jquery-3.4.1.min.js"></script>
+<script src="code/Chart.bundle.min.js"></script>
+
+<script src="code/main.js"></script>
+<!-- endbuild -->
+<script>
+    getCompanies();
+    getNews();
+</script>
+</html>
